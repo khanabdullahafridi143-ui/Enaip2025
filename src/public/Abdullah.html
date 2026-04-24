@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scout - AGESCI Muggia</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+</style>
+
+</head>
+
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/20 backdrop-blur-lg transition-all duration-300">
+  <div class="container mx-auto flex justify-between items-center p-4 text-white">
+    <h1 class="text-2xl font-bold">Parrocchia San Giovanni</h1>
+
+    <ul class="hidden md:flex space-x-6">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../associazioni.html">Associazioni</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO (NO BLOB QUI) -->
+<header id="hero" class="h-[85vh] parallax flex items-end"
+style="background-image:url('../immagini/scout.png')">
+
+  <div class="w-full bg-gradient-to-t from-black/80 to-transparent p-10">
+    <div class="flex items-center gap-6">
+      <img src="../immagini/sfondo.jpg" class="h-32 object-contain">
+
+      <div>
+        <h1 class="text-6xl font-bold text-white">ABDULLAH KHAN </h1>
+        <p class="text-white/80 text-xl mt-2">Crescere, esplorare, servire</p>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<!-- MAIN con effetti -->
+<main class="relative overflow-hidden px-6 py-24 space-y-32 max-w-6xl mx-auto">
+
+<!-- BLOB SOLO QUI -->
+<div class="absolute top-0 left-[-150px] w-[400px] h-[400px] bg-blue-400 rounded-full blur-[140px] opacity-20 animate-pulse"></div>
+<div class="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] bg-purple-400 rounded-full blur-[140px] opacity-20 animate-pulse"></div>
+
+<!-- INTRO -->
+<section class="text-center" data-aos="fade-up">
+  <h2 class="text-4xl font-bold mb-6">Cos’è l’AGESCI</h2>
+  <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+    Un percorso educativo che accompagna ragazzi e ragazze nella crescita personale,
+    nella responsabilità e nel servizio attraverso il metodo scout.
+  </p>
+</section>
+
+<!-- CARD -->
+<section class="grid md:grid-cols-3 gap-10">
+
+  <div data-aos="fade-up" class="relative group">
+    <div class="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-300 to-amber-200 rounded-3xl blur-xl opacity-60 group-hover:opacity-90 transition"></div>
+    <div class="relative bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-xl h-56 flex flex-col justify-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-2">Metodo</h3>
+      <p class="text-gray-700">Esperienze concrete e crescita dai 8 ai 21 anni.</p>
+    </div>
+  </div>
+
+  <div data-aos="fade-up" data-aos-delay="100" class="relative group">
+    <div class="absolute -inset-1 bg-gradient-to-r from-purple-300 via-blue-200 to-amber-200 rounded-3xl blur-xl opacity-60 group-hover:opacity-90 transition"></div>
+    <div class="relative bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-xl h-56 flex flex-col justify-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-2">Valori</h3>
+      <p class="text-gray-700">Rispetto, inclusione e fede.</p>
+    </div>
+  </div>
+
+  <div data-aos="fade-up" data-aos-delay="200" class="relative group">
+    <div class="absolute -inset-1 bg-gradient-to-r from-blue-300 via-amber-200 to-purple-300 rounded-3xl blur-xl opacity-60 group-hover:opacity-90 transition"></div>
+    <div class="relative bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-xl h-56 flex flex-col justify-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-2">Capi</h3>
+      <p class="text-gray-700">Adulti formati che guidano i ragazzi.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- TIMELINE (FIX GRADIENTE) -->
+<section class="relative mt-32">
+
+  <h2 class="text-4xl font-bold text-center mb-20">Gli scout a Muggia</h2>
+
+  <!-- GLOW COLORATO -->
+  <div class="absolute top-32 left-1/2 w-[120px] h-[calc(100%-8rem)]
+    bg-gradient-to-b from-blue-400 via-purple-300 to-amber-300
+    blur-3xl opacity-40 transform -translate-x-1/2">
+  </div>
+
+  <!-- LINEA -->
+  <div class="absolute top-32 left-1/2 w-[3px] h-[calc(100%-8rem)]
+    bg-gradient-to-b from-blue-500 via-purple-400 to-amber-400
+    transform -translate-x-1/2">
+  </div>
+
+  <div class="space-y-24">
+
+    <div class="flex justify-between items-center" data-aos="fade-right">
+      <div class="w-5/12 text-right">
+        <h3 class="text-2xl font-bold">1922</h3>
+        <p>Nasce il gruppo scout e le prime promesse.</p>
+      </div>
+      <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+      <div class="w-5/12"></div>
+    </div>
+
+    <div class="flex justify-between items-center" data-aos="fade-left">
+      <div class="w-5/12"></div>
+      <div class="w-6 h-6 bg-purple-500 rounded-full"></div>
+      <div class="w-5/12">
+        <h3 class="text-2xl font-bold">1923</h3>
+        <p>Registrazione ufficiale del Riparto.</p>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-center" data-aos="fade-right">
+      <div class="w-5/12 text-right">
+        <h3 class="text-2xl font-bold">1964</h3>
+        <p>Nascono le guide AGI.</p>
+      </div>
+      <div class="w-6 h-6 bg-amber-500 rounded-full"></div>
+      <div class="w-5/12"></div>
+    </div>
+
+    <div class="flex justify-between items-center" data-aos="fade-left">
+      <div class="w-5/12"></div>
+      <div class="w-6 h-6 bg-blue-600 rounded-full"></div>
+      <div class="w-5/12">
+        <h3 class="text-2xl font-bold">1974</h3>
+        <p>Nasce AGESCI Muggia 1.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BRANCHE -->
+<section class="grid md:grid-cols-3 gap-10 mt-32">
+
+  <div data-aos="fade-up" class="text-center">
+    <img src="../immagini/ggr1.png" class="h-28 mx-auto mb-4 object-contain">
+    <h3 class="text-2xl font-bold">L/C</h3>
+    <p class="text-gray-600">8–11 anni</p>
+    <p class="text-gray-700 mt-2">Gioco, amicizia e scoperta.</p>
+  </div>
+
+  <div data-aos="fade-up" data-aos-delay="100" class="text-center">
+    <img src="../immagini/EG.png" class="h-28 mx-auto mb-4 object-contain">
+    <h3 class="text-2xl font-bold">E/G</h3>
+    <p class="text-gray-600">12–16 anni</p>
+    <p class="text-gray-700 mt-2">Avventura e natura.</p>
+  </div>
+
+  <div data-aos="fade-up" data-aos-delay="200" class="text-center">
+    <img src="../immagini/RS.png" class="h-28 mx-auto mb-4 object-contain">
+    <h3 class="text-2xl font-bold">R/S</h3>
+    <p class="text-gray-600">17–21 anni</p>
+    <p class="text-gray-700 mt-2">Servizio e comunità.</p>
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER (PULITO) -->
+<footer class="text-white bg-gradient-to-r from-amber-900 via-amber-800 to-amber-700">
+  <div class="container mx-auto p-6 grid md:grid-cols-3 gap-6">
+
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Contatti</h3>
+      <p>Email: info@parrocchiasangiovanni.it</p>
+      <p>Tel: +39 012 345 6789</p>
+
+      <div class="mt-4">
+        <p class="font-semibold">Scout:</p>
+        <p>Email: muggia1@fvg.agesci.it</p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Orari</h3>
+      <p>Domenica: 10:00 - 18:00</p>
+      <p>Feriali: 08:00 - 18:00</p>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Dove siamo</h3>
+      <iframe class="w-full h-40 rounded"
+      src="https://www.google.com/maps/embed?pb=!1m18..."
+      loading="lazy"></iframe>
+    </div>
+
+  </div>
+
+  <div class="text-center p-4 text-sm">
+    © 2026 Parrocchia San Giovanni
+  </div>
+</footer>
+
+<script>
+AOS.init({ duration: 1000, once: true });
+
+const navbar = document.getElementById("navbar");
+const hero = document.getElementById("hero");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > hero.offsetHeight - 80) {
+    navbar.classList.add("bg-amber-900");
+  } else {
+    navbar.classList.remove("bg-amber-900");
+  }
+});
+</script>
+
+</body>
+</html>
