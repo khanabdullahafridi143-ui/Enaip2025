@@ -1,121 +1,248 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdullah Khan</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>abdullah khan</title>
 
-<script src="https://cdn.tailwindcss.com"></script><script>"https://cdn.tailwindcss.com"</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        @keyframes float {
+            0% {
+                transform: translate(0, 0)
+            }
+            50% {
+                transform: translate(40px, -30px)
+            }
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+
+        .blob {
+            animation: float 12s infinite
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeUp {
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+    </style>
 </head>
 
-<body class="bg-gradient-to-br from-gray-100 via-white to-gray-200 text-gray-800">
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/20 backdrop-blur-lg transition-all duration-300" id="navbar">
+    <div class="container mx-auto flex justify-between items-center p-4 text-white">
+        <h1 class="text-xl font-bold">ABDULLAH KHAN</h1>
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="#">Home</a></li>
+            <li><a href="#chi">Chi siamo</a></li>
+            <li><a href="#associazioni">Associazioni</a></li>
+            <li><a href="#orari">Orari</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </div>
+</nav>
 
 <!-- HERO -->
-<section class="h-screen flex items-center justify-center relative overflow-hidden">
+<header class="h-[60vh] bg-cover flex items-end" id="hero"
+        style="background-image:url('immagini/sfondo.jpg'); background-position:center 55%;">
+    <div class="w-full bg-gradient-to-t from-black/80 to-transparent p-10">
+        <h1 class="text-5xl md:text-6xl text-white font-bold opacity-0 animate-fadeUp">
+            Parrocchia San Giovanni
+        </h1>
+        <p class="text-white/80 text-xl mt-2 opacity-0 animate-fadeUp delay-200">
+            Fede, comunità, crescita
+        </p>
+    </div>
+</header>
 
-  <!-- background -->
-  <img src="abdullah.jpeg" 
-       class="absolute w-full h-full object-cover blur-md scale-110">
+<!-- BACKGROUND BLOBS -->
+<div class="relative overflow-hidden">
+    <div class="blob absolute top-10 left-10 w-[350px] h-[350px] bg-blue-400 rounded-full blur-[120px] opacity-30"></div>
+    <div class="blob absolute bottom-20 right-10 w-[350px] h-[350px] bg-purple-400 rounded-full blur-[120px] opacity-30"></div>
 
-  <!-- overlay -->
-  <div class="absolute inset-0 bg-black/60"></div>
+    <main class="px-6 py-24 space-y-28 max-w-6xl mx-auto relative z-10">
 
-  <!-- content -->
-  <div class="relative text-center text-white px-4" data-aos="fade-up">
-    <h1 class="text-5xl md:text-7xl font-bold tracking-wide">
-     TIBA
-    </h1>
-    <p class="text-lg md:text-xl mt-4 text-white/80 max-w-xl mx-auto">
-      AFRIDI ✨
-    </p>
-  </div>
+        <!-- INTRO -->
+        <section class="text-center max-w-3xl mx-auto" data-aos="fade-up" id="chi">
+            <p class="text-xl text-gray-700 leading-relaxed">
+                La Parrocchia San Giovanni è un luogo di fede, accoglienza e comunità, dove bambini, ragazzi e famiglie
+                possono crescere insieme.
+            </p>
+        </section>
 
-</section>
+        <!-- ASSOCIAZIONI -->
+        <section id="associazioni">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Le nostre realtà</h2>
 
-<!-- CHI SONO -->
-<section class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-  <!-- immagine -->
-  <div data-aos="fade-right" class="relative group">
-    <div class="absolute -inset-2 bg-gradient-to-r from-blue-400 via-purple-300 to-amber-300 
-    blur-xl opacity-40 group-hover:opacity-70 transition rounded-3xl"></div>
+                <!-- CARD -->
+                <a class="group" data-aos="zoom-in" href="gruppi/Gruppo-Catechismo.html">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition duration-300">
+                        <img class="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                             src="immagini/gc.png">
+                        <div class="absolute inset-0 bg-black/40 flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Catechismo</h3>
+                        </div>
+                    </div>
+                </a>
 
-    <img src="abdullah.jpeg" 
-         class="relative rounded-3xl shadow-2xl w-full h-[420px] object-cover">
-  </div>
+                <a class="group" data-aos="zoom-in" data-aos-delay="100" href="gruppi/gruppo-giovani.html">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition duration-300">
+                        <img class="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                             src="immagini/gg.png">
+                        <div class="absolute inset-0 bg-black/40 flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Gruppo Giovani</h3>
+                        </div>
+                    </div>
+                </a>
 
-  <!-- testo -->
-  <div data-aos="fade-left" class="space-y-6">
-    <h2 class="text-4xl font-bold">Chi sono</h2>
-    <p class="text-lg text-gray-700 leading-relaxed">
-      Mi chiamo Abdullah Khan 
-    </p>
-  </div>
+                <a class="group" data-aos="zoom-in" data-aos-delay="200" href="gruppi/Gruppo-Scout.html">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition duration-300">
+                        <img class="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                             src="immagini/scout.png">
+                        <div class="absolute inset-0 bg-black/40 flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Scout</h3>
+                        </div>
+                    </div>
+                </a>
 
-</section>
+                <a class="group" data-aos="zoom-in" data-aos-delay="100" href="gruppi/Gruppo-Coro.html">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition duration-300">
+                        <img class="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                             src="immagini/Coro Ad.jpg">
+                        <div class="absolute inset-0 bg-black/40 flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Cori</h3>
+                        </div>
+                    </div>
+                </a>
 
-<!-- SKILLS -->
-<section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
+                <a class="group" data-aos="zoom-in" data-aos-delay="200" href="gruppi/Pulizie-Duomo.html">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition duration-300">
+                        <img class="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                             src="immagini/hhhh.png">
+                        <div class="absolute inset-0 bg-black/40 flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Pulizie Duomo</h3>
+                        </div>
+                    </div>
+                </a>
 
-  <!-- card -->
-  <div class="group p-6 bg-white/70 backdrop-blur-xl rounded-2xl shadow-lg 
-  min-h-[180px] flex flex-col justify-center text-center hover:shadow-2xl transition">
+                <a class="group" data-aos="zoom-in" data-aos-delay="100" href="gruppi/Gruppo-Gesù-Risorto.html">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition duration-300">
+                        <img class="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                             src="immagini/Gesù Risorto.png">
+                        <div class="absolute inset-0 bg-black/40 flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Gesù Risorto</h3>
+                        </div>
+                    </div>
+                </a>
 
-    <h3 class="text-xl font-bold mb-2">Web Design</h3>
-    <p class="text-gray-600 text-sm">Siti moderni e responsive</p>
-  </div>
+                <a class="group" data-aos="zoom-in" data-aos-delay="100" href="gruppi/Gruppo-Punto-Di-Ascolto.html">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition duration-300">
+                        <img class="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                             src="immagini/PDA.png">
+                        <div class="absolute inset-0 bg-black/40 flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Punto Di Ascolto </h3>
+                        </div>
+                    </div>
+                </a>
 
-  <div class="group p-6 bg-white/70 backdrop-blur-xl rounded-2xl shadow-lg 
-  min-h-[180px] flex flex-col justify-center text-center hover:shadow-2xl transition">
 
-    <h3 class="text-xl font-bold mb-2">Frontend</h3>
-    <p class="text-gray-600 text-sm">HTML, CSS, Tailwind</p>
-  </div>
+                <a class="group" data-aos="zoom-in" data-aos-delay="100" href="gruppi/Gruppo-San-Vincenzo.html">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition duration-300">
+                        <img class="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                             src="immagini/SV.png">
+                        <div class="absolute inset-0 bg-black/40 flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">San Vincenzo</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-  <div class="group p-6 bg-white/70 backdrop-blur-xl rounded-2xl shadow-lg 
-  min-h-[180px] flex flex-col justify-center text-center hover:shadow-2xl transition">
+        <!-- ORARI -->
+        <section class="text-center" data-aos="fade-up" id="orari">
+            <h2 class="text-3xl font-bold mb-6">Orari della Messa</h2>
+            <p class="text-lg text-gray-700">
+                Domenica: 10:00 – 18:00<br>
+                Feriali: 08:00 – 18:00
+            </p>
+        </section>
 
-    <h3 class="text-xl font-bold mb-2">Creatività</h3>
-    <p class="text-gray-600 text-sm">Design elegante e moderno</p>
-  </div>
+        <!-- CONTATTI -->
+        <section class="text-center" data-aos="fade-up" id="contatti">
+            <h2 class="text-3xl font-bold mb-6">Contatti</h2>
+            <p class="text-lg text-gray-700">
+                Email: info@parrocchiasangiovanni.it<br>
+                Tel: +39 012 345 6789
+            </p>
+        </section>
 
-</section>
+    </main>
+</div>
 
-<!-- TIMELINE -->
-<section class="max-w-4xl mx-auto px-6 py-24">
+<!-- FOOTER -->
+<footer class="text-white bg-gradient-to-r from-amber-900 via-amber-800 to-amber-700">
+    <div class="container mx-auto p-10 grid md:grid-cols-3 gap-8">
 
-  <h2 class="text-4xl font-bold text-center mb-16">
-    Gli scout a Muggia
-  </h2>
+        <div>
+            <h3 class="text-lg font-semibold mb-4 border-b border-amber-500 pb-2">Contatti</h3>
+            <p>Email: info@parrocchiasangiovanni.it</p>
+            <p>Tel: +39 012 345 6789</p>
+        </div>
 
-  <div class="relative border-l-2 border-gray-300 space-y-12 pl-6">
+        <div>
+            <h3 class="text-lg font-semibold mb-4 border-b border-amber-500 pb-2">Orari Segreteria</h3>
+            <p>Domenica: 10:00 - 18:00</p>
+            <p>Feriali: 08:00 - 18:00</p>
+        </div>
 
-    <!-- item -->
-    <div data-aos="fade-right">
-      <div class="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full"></div>
-      <h3 class="text-xl font-bold">1922</h3>
-      <p class="text-gray-600 mt-1">
-        Nasce il gruppo scout e le prime promesse.
-      </p>
+        <div>
+            <h3 class="text-lg font-semibold mb-4 border-b border-amber-500 pb-2">Dove siamo</h3>
+            <iframe class="w-full h-40 rounded shadow-inner"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.613458747677!2d13.765094315646604!3d45.60425217910144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ad1e6da3eb5df%3A0x7cd88cd61b02e5b4!2sCalle%20Luca%20Farra%201%2C%2034015%20Muggia%20TS%2C%20Italia!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"></iframe>
+        </div>
+
     </div>
 
-    <div data-aos="fade-right">
-      <div class="absolute -left-3 w-6 h-6 bg-purple-500 rounded-full"></div>
-      <h3 class="text-xl font-bold">1974</h3>
-      <p class="text-gray-600 mt-1">
-        Nasce AGESCI Muggia 1.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
+    <div class="text-center p-6 text-sm border-t border-white/10">© 2026 Parrocchia San Giovanni</div>
+</footer>
 <script>
-AOS.init({duration:1000, once:true});
+    AOS.init({duration: 1000, once: true});
+
+    const navbar = document.getElementById("navbar");
+    const hero = document.getElementById("hero");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > hero.offsetHeight - 80) {
+            navbar.classList.add("bg-amber-900");
+        } else {
+            navbar.classList.remove("bg-amber-900");
+        }
+    });
 </script>
 
 </body>
